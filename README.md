@@ -1,53 +1,45 @@
+#### **Public Health Disparity Analysis in India**
+This project is an end-to-end data analysis workflow, simulating a real-world analysis scenario . The goal was to uncover regional disparities in public health and socio-economic factors in India by conducting a focused case study on the states of **Bihar** and **Kerala**. The project highlights the complete data analysis lifecycle, from raw data acquisition to generating compelling, data-backed insights.
 
 ---
 
-### **Project Title: Public Health Disparity Analysis in India**
+#### **Project Goals**
+* **Source Real-World Data**: Acquire and integrate authentic, inconsistent public datasets from the Government of India's Open Government Data (OGD) platform.
+* **Data Wrangling**: Clean, transform, and prepare messy data, addressing common real-world challenges to create a unified and analysis-ready dataset.
+* **Comparative Analysis**: Explore the relationships between health outcomes and socio-economic indicators, using a direct comparison of Bihar and Kerala.
+* **Insight Generation**: Derive and communicate actionable insights that reveal disparities and potential areas for public health intervention.
 
-#### **Project Overview**
+---
 
-This project is an end-to-end data analysis workflow simulating a real-world analysis scenario . It focuses on identifying and analyzing regional disparities in public health infrastructure, outcomes, and socio-economic factors in India. The analysis culminates in a focused case study comparing the public health landscapes of **Bihar** and **Kerala**, two states with vastly different socio-economic profiles.
+#### **Key Challenges & Learnings**
 
-It demonstrates proficiency in the complete data analysis lifecycle, from handling messy, authentic data to generating and communicating compelling, data-backed insights.
+This project's value lies in its realistic approach to data. Rather than using a clean dataset, I had to overcome several common data challenges:
 
-#### **Key Questions Addressed**
+* **Broken Data Links**: The main dataset for all states was unavailable, requiring me to manually download and combine individual state-wise files from different years.
+* **Inconsistent Data Formats**: Data sources used different reporting periods and inconsistent column names, which I resolved by using programmatic methods to clean and unify the data.
+* **Data Encoding Errors**: I encountered `UnicodeDecodeError` when loading CSV files, which I successfully resolved by identifying and specifying the correct file encoding (`latin1`).
+* **Data Limitations**: The project's final scope was a focused case study due to fragmented reporting periods and missing columns across the raw datasets. This taught me to manage project expectations and adapt my analysis to the available data.
 
-* How do key public health outcomes (e.g., institutional births) correlate with socio-economic indicators (e.g., female school attendance)?
-* What significant disparities exist in health infrastructure and service delivery (e.g., ANC registrations) between states?
-* How can data from multiple, inconsistent sources be cleaned and integrated to support a comparative analysis?
-
-#### **Methodology & Project Journey**
-
-The project followed a standard data analysis methodology, with a strong emphasis on problem-solving and adapting to real-world data challenges.
-
-1.  **Data Acquisition**: Sourced three distinct datasets from the Government of India's Open Government Data (OGD) platform:
-    * **Health Management Information System (HMIS) Data**: Provided granular, district-level data on health infrastructure and service utilization.
-    * **National Family Health Survey (NFHS) Factsheets**: Offered state-level data on key health outcomes and population characteristics.
-    * **National Literacy Rate Data**: Provided socio-economic context for the analysis.
-
-2.  **Data Cleaning & Preprocessing**: This was the most critical phase, involving significant data wrangling to prepare the data for analysis.
-    * **Dataset Integration**: Combined data from multiple years and files into unified DataFrames.
-    * **Handling Inconsistencies**: Addressed issues such as **`UnicodeDecodeError`** by specifying the correct encoding (`latin1`) and **`KeyError`** by programmatically identifying and selecting columns with inconsistent names.
-    * **Data Transformation**: Converted datasets from a "wide" to a "long" format for time-series analysis and pivoted data for a clean, merged final DataFrame.
-    * **Data Limitations**: Acknowledged and adapted to data limitations, such as a broken full-dataset download link and a fragmented reporting period across the HMIS files, which led to a focused case study.
-
-3.  **Exploratory Data Analysis (EDA)**: Performed descriptive statistics and correlation analysis to identify key relationships.
-
-4.  **Visualization & Communication**: Generated visualizations to effectively communicate the findings, including scatter plots to show correlations and bar charts to highlight disparities.
+---
 
 #### **Key Insights & Findings**
 
-The analysis, though a focused case study, produced several compelling insights:
+The final analysis, despite its focused scope, produced powerful and actionable insights:
 
--   **Strong Correlation between Education and Health**: A near-perfect positive correlation ($r = 0.997$) was discovered between a state's **Female School Attendance Percentage** and its **Institutional Births Percentage**. This finding provides strong, data-backed evidence of the link between socio-economic factors and health outcomes.
--   **Service Delivery Disparity**: The data reveals a significant disparity in health service usage, with **Bihar** reporting a vastly higher number of **Antenatal Care (ANC) Registrations** than **Kerala**, despite having lower overall health outcomes. This is a crucial finding that merits further investigation into reporting methodologies and public health program effectiveness.
+-   **Education and Health Correlation**: A strong positive correlation ($r = 0.997$) was discovered between a state's **Female School Attendance Percentage** and its **Institutional Births Percentage**. This finding provides compelling evidence that improving female education can be a significant driver of better public health outcomes.
+-   **Disparity in ANC Services**: A major disparity was identified in health service usage. **Bihar** reported a vastly higher number of **Antenatal Care (ANC) Registrations** than **Kerala**, despite having a lower institutional birth rate. This insight warrants further investigation into differences in data collection, service accessibility, and public health focus between the states.
+
+---
 
 #### **Technologies Used**
-
-* **Python**: The primary language for the entire analysis.
-* **Pandas**: The core library for data manipulation, cleaning, and aggregation.
+* **Python**
+* **Pandas**: Performed Data manipulation, cleaning, and aggregation.
 * **NumPy**: Used for numerical operations.
-* **Matplotlib**: The primary library for creating static visualizations.
-* **Jupyter Notebook**: The environment for a reproducible, step-by-step analysis and report.
+* **Matplotlib**: Created static visualizations.
+* **Jupyter Notebook**
+* **PowerBI**: Generated Dashboards for Insights 
+
+---
 
 #### **How to Run the Project**
 
@@ -55,7 +47,5 @@ The analysis, though a focused case study, produced several compelling insights:
     `git clone https://github.com/harry3201/Health_Disparity_Analysis.git`
 2.  **Install dependencies**:
     `pip install pandas numpy matplotlib`
-3.  **Download the raw data**: The raw data files must be downloaded from the government portals mentioned in the notebook. Place them in the same directory as the notebook.
-4.  **Run the Jupyter Notebook**: Open and run `Health_Disparities_Project.ipynb` to execute the complete analysis from start to finish.
-
----
+3.  **Download raw data**: The raw data files used in this project must be downloaded from the government portals mentioned in the Jupyter Notebook and placed in the project directory.
+4.  **Run the analysis**: Open and run `Health_Disparities_Project.ipynb` in a Jupyter environment to execute the complete analysis from start to finish.
