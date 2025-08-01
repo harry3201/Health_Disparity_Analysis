@@ -1,12 +1,13 @@
+
 ---
 
 ### **Project Title: Public Health Disparity Analysis in India**
 
 #### **Project Overview**
 
-This project is an end-to-end data analysis workflow simulating a real-world scenario of a data analyst. It focuses on identifying and analyzing regional disparities in public health infrastructure, outcomes, and socio-economic factors in India. The analysis culminates in a focused case study comparing the public health landscapes of **Bihar** and **Kerala**, two states with vastly different socio-economic profiles.
+This project is an end-to-end data analysis workflow simulating a real-world analysis scenario . It focuses on identifying and analyzing regional disparities in public health infrastructure, outcomes, and socio-economic factors in India. The analysis culminates in a focused case study comparing the public health landscapes of **Bihar** and **Kerala**, two states with vastly different socio-economic profiles.
 
-This project demonstrates proficiency in the complete data analysis lifecycle, from handling messy, authentic data to generating and communicating compelling, data-backed insights.
+It demonstrates proficiency in the complete data analysis lifecycle, from handling messy, authentic data to generating and communicating compelling, data-backed insights.
 
 #### **Key Questions Addressed**
 
